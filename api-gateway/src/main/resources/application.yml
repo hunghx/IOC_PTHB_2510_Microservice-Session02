@@ -16,7 +16,12 @@ spring:
             - id : order-service-eureka
               uri : lb://order-service-eureka
               predicates:
-                - Path=/orders/**,/api/v1/orders/**,/api/v2/products/**
+                - Path=/orders/**,/api/v1/orders/**,/xyz/api/v2/products/**
+              filters:
+                - AddRequestHeader=token,abcxyz
+                - AddResponseHeader=authen,true
+#                - PrefixPath=/api
+                - StripPrefix=1
             - id: ship-service
               uri : lb://ship-service
               predicates:

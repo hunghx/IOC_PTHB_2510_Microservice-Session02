@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: config-server-service
+    cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/hunghx/config-server.git
+            default-label: master
+            username:
+            password:
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8686/eureka/
+server:
+  port: 8888
+

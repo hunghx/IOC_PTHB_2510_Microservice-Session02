@@ -1,0 +1,21 @@
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://localhost:8686/eureka/
+server:
+    port: 8787
+spring:
+  application:
+        name: shiping-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+test:
+  username: minhtx
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

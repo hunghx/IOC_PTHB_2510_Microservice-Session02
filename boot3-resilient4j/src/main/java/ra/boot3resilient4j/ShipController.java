@@ -26,5 +26,10 @@ public class ShipController {
         // gọi sang service để thực hiện check thanh toán
         return shipService.testCircuitBreaker(isError);
     }
+    @GetMapping("/rate")
+    public String testRateLimit() {
+        // gọi sang service để thực hiện check thanh toán
+        return shipService.testRateLimiter();
+    }
 
 }

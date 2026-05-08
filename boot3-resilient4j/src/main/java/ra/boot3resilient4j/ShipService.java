@@ -1,6 +1,7 @@
 package ra.boot3resilient4j;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import org.springframework.stereotype.Service;
@@ -40,5 +41,13 @@ public class ShipService {
 
     public String testCircuitBreakerFallback(boolean isError,Throwable ex) {
         return "Breaker is OPEN !!!!";
+    }
+    @RateLimiter(name = "payService", fallbackMethod = "testRateLimiterFallback")
+    public String testRateLimiter(){
+        return "Truy cập thành công";
+    }
+
+    public String testRateLimiterFallback(Throwable ex){
+        return "Đang xử lý, vui lòng thử lại sau 10s!!";
     }
 }

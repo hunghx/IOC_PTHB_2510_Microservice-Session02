@@ -16,12 +16,12 @@ resilience4j:
       payService:
         maxAttempts: 3                     # Thử lại tối đa 3 lần
         waitDuration: 1s                   # Khoảng cách giữa các lần thử
-  ratelimiter:
+  ratelimiter:                            # giời hạn lưu lượng truy cập trong 1 khoảng thời gian
     instances:
       payService:
-        limitForPeriod: 10                 # Tối đa 10 request
-        limitRefreshPeriod: 1s             # Trong mỗi giây
-        timeout-duration: 2s
+        limitForPeriod: 3                 # Tối đa 10 request
+        limitRefreshPeriod: 10s             # Trong mỗi giây
+        timeout-duration: 0s
   timelimiter:                             # thời gian xử lí quá lâu
     instances:
       payService:

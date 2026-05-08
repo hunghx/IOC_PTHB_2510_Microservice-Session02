@@ -27,6 +27,12 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+<<<<<<< HEAD
+    implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+=======
+>>>>>>> 7b6ed4a36d4ce92847e1a1a11b9d6a44b9db3f88
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'

@@ -12,6 +12,25 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+<<<<<<< HEAD
+        <option name="externalProjectPath" value="$PROJECT_DIR$/boot3-resilient4j" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/boot3-resilient4j" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+=======
+>>>>>>> 7b6ed4a36d4ce92847e1a1a11b9d6a44b9db3f88
+        <option name="externalProjectPath" value="$PROJECT_DIR$/config-server-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/config-server-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/eureka-server-service" />
         <option name="modules">
           <set>
@@ -32,6 +51,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/order-service-eureka" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/resilient4j" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/resilient4j" />
           </set>
         </option>
       </GradleProjectSettings>

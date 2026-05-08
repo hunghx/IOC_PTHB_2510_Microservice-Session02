@@ -1,0 +1,35 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  application:
+      name: config-server-service
+  cloud:
+     bus:
+       enabled: true
+     config:
+       server:
+         git:
+           uri: https://github.com/hunghx/config-server.git
+           username: hunghx
+           password:
+           default-label: main
+           timeout: 10
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8686/eureka/
+server:
+  port: 8888
+#management:
+  endpoints:
+    web:
+      exposure:
+        include: 'busrefresh' # Hoặc dùng '*' để mở tất cả các endpoint
+
+

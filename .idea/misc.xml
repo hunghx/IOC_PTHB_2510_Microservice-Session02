@@ -3,15 +3,10 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/api-gateway" />
-<<<<<<< HEAD
-    <file type="web" url="file://$PROJECT_DIR$/boot3-resilient4j" />
-=======
->>>>>>> 7b6ed4a36d4ce92847e1a1a11b9d6a44b9db3f88
     <file type="web" url="file://$PROJECT_DIR$/config-server-service" />
     <file type="web" url="file://$PROJECT_DIR$/eureka-server-service" />
     <file type="web" url="file://$PROJECT_DIR$/order-service" />
     <file type="web" url="file://$PROJECT_DIR$/order-service-eureka" />
-    <file type="web" url="file://$PROJECT_DIR$/resilient4j" />
     <file type="web" url="file://$PROJECT_DIR$/ship-service" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="24" project-jdk-type="JavaSDK">

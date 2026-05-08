@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api-gateway.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-gateway.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api-gateway.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/boot3-resilient4j/boot3-resilient4j.iml" filepath="$PROJECT_DIR$/boot3-resilient4j/boot3-resilient4j.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/boot3-resilient4j.main.iml" filepath="$PROJECT_DIR$/.idea/modules/boot3-resilient4j.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/boot3-resilient4j.test.iml" filepath="$PROJECT_DIR$/.idea/modules/boot3-resilient4j.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/config-server-service/config-server-service.iml" filepath="$PROJECT_DIR$/config-server-service/config-server-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-server-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/config-server-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-server-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/config-server-service.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka-server-service/eureka-server-service.iml" filepath="$PROJECT_DIR$/eureka-server-service/eureka-server-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-server-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-server-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-server-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-server-service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/logistic.iml" filepath="$PROJECT_DIR$/.idea/logistic.iml" />
-      <module fileurl="file://$PROJECT_DIR$/order-service-eureka/order-service-eureka.iml" filepath="$PROJECT_DIR$/order-service-eureka/order-service-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/order-service-eureka.main.iml" filepath="$PROJECT_DIR$/.idea/modules/order-service-eureka.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/order-service-eureka.test.iml" filepath="$PROJECT_DIR$/.idea/modules/order-service-eureka.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/resilient4j.main.iml" filepath="$PROJECT_DIR$/.idea/modules/resilient4j.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/resilient4j.test.iml" filepath="$PROJECT_DIR$/.idea/modules/resilient4j.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ship-service/ship-service.iml" filepath="$PROJECT_DIR$/ship-service/ship-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ship-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ship-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ship-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ship-service.test.iml" />
     </modules>
   </component>
 </project>

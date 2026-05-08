@@ -1,6 +1,6 @@
 spring:
-  application:
-    name: resilient4j-boot3
+    application:
+        name: resilient4j
 server:
   port: 9898
 resilience4j:
@@ -8,9 +8,9 @@ resilience4j:
     instances:
       payService:
         registerHealthIndicator: true
-        slidingWindowSize: 5              # Theo dõi 10 cuộc gọi gần nhất
+        slidingWindowSize: 10              # Theo dõi 10 cuộc gọi gần nhất
         failureRateThreshold: 50           # Mở mạch nếu lỗi > 50%
-        waitDurationInOpenState: 20s        # Chờ 15s trước khi thử lại (Half-Open)
+        waitDurationInOpenState: 5s       # Chờ 15s trước khi thử lại (Half-Open)
   retry:
     instances:
       payService:
@@ -19,13 +19,14 @@ resilience4j:
   ratelimiter:
     instances:
       payService:
-        limitForPeriod: 10                 # Tối đa 10 request
-        limitRefreshPeriod: 1s             # Trong mỗi giây
+#        limitForPeriod: 10                 # Tối đa 10 request
+#        limitRefreshPeriod: 1s             # Trong mỗi giây
         timeout-duration: 2s
-  timelimiter:                             # thời gian xử lí quá lâu
+  timelimiter:
     instances:
       payService:
         timeout-duration: 2s
+        cancel-running-future: true
 
 management:
   endpoints:

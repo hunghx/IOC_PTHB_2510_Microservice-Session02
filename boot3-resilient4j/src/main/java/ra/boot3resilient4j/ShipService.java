@@ -1,5 +1,7 @@
 package ra.boot3resilient4j;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,17 @@ public class ShipService {
     public CompletableFuture<String> fallBackCheckPayment(Throwable ex) {
         return CompletableFuture.completedFuture("fallback: " + ex.getMessage());
     }
+    @Retry(name = "payService",fallbackMethod = "testCircuitBreakerFallback")
+    @CircuitBreaker(name = "payService", fallbackMethod = "testCircuitBreakerFallback")
+    public String testCircuitBreaker(boolean isError) {
+        if (isError) {
+            throw new RuntimeException("testCircuitBreaker");
+        }else {
+            return "get Data success";
+        }
+    }
 
-
+    public String testCircuitBreakerFallback(boolean isError,Throwable ex) {
+        return "Breaker is OPEN !!!!";
+    }
 }

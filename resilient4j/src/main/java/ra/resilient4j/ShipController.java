@@ -1,11 +1,10 @@
-package ra.boot3resilient4j;
+package ra.resilient4j;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.CompletableFuture;
@@ -17,14 +16,9 @@ public class ShipController {
     private final ShipService shipService;
 
     @GetMapping("/pay")
-    public CompletableFuture<String> pay() {
+    public ResponseEntity<String> pay() {
         // gọi sang service để thực hiện check thanh toán
-        return shipService.callRemote();
-    }
-    @GetMapping("/breaker")
-    public String testBreaker(@RequestParam("isError") Boolean isError) {
-        // gọi sang service để thực hiện check thanh toán
-        return shipService.testCircuitBreaker(isError);
+        return new ResponseEntity<>(shipService.checkPayment(),HttpStatus.OK);
     }
 
 }

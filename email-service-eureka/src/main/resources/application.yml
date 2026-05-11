@@ -1,0 +1,39 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8686/eureka/
+spring:
+    application:
+        name: email-service-eureka
+    mail:
+      host: smtp.gmail.com
+      port: 587
+      username: baby10051999@gmail.com
+      password: gcedcdkljuesruvc
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+    kafka:
+      bootstrap-servers: localhost:9092
+      group-id: order-create-groupId
+      key-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      consumer:
+        group-id: order-create-groupId
+        auto-offset-reset: earliest
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        properties:
+          spring.json.trusted.packages: "*"
+          spring.json.use.type.headers: false
+#          spring.json.value.type.mapping: order-create:ra.email.OrderCreateDto
+
+          spring.json.value.default.type: ra.email.OrderCreateDto
+
+server:
+  port: 8585

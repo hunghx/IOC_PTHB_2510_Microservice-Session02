@@ -35,19 +35,19 @@ public class OrderServiceImpl implements IOrderService {
 ////            throw new DataNotFoundException("Order Not Found");
 //        }
         // Order trước
-        double total = request.getItems().stream()
-                .mapToDouble(value -> value.getProductPrice().doubleValue()*value.getQuantity())
-                .sum();
-        System.out.println("total = " + total);
-        Orders order = new Orders(null, request.getUserId(),new BigDecimal(total), OrderStatus.CREATED, LocalDateTime.now());
-        orderRepository.save(order);
-
-        // Lưu orderitem
-        for (OrderItemDto item:  request.getItems()) {
-            OrderItem en = orderItemMapper.mapToOrderItem(item);
-            en.setOrder(order);
-            orderItemRepository.save(en);
-        }
+//        double total = request.getItems().stream()
+//                .mapToDouble(value -> value.getProductPrice().doubleValue()*value.getQuantity())
+//                .sum();
+//        System.out.println("total = " + total);
+        Orders order = new Orders();
+//        orderRepository.save(order);
+//
+//        // Lưu orderitem
+//        for (OrderItemDto item:  request.getItems()) {
+//            OrderItem en = orderItemMapper.mapToOrderItem(item);
+//            en.setOrder(order);
+//            orderItemRepository.save(en);
+//        }
         return order;
     }
 

@@ -20,3 +20,20 @@ spring:
             hibernate:
                 format_sql: true
         show-sql: true
+    kafka:
+      # đây là cổng chạy của kafka trên docker
+      bootstrap-servers: localhost:9092
+      producer:
+        # Định dạng của key
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        # Chuyển thành Json
+        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+        # tính tin cậy
+        acks: all
+        # số lần thử lại tối đa
+        retries: 3
+        properties:
+          spring.json.trusted.packages: "*"
+          spring.json.use.type.headers: false
+#          spring.json.value.type.mapping: orderCreateDto:re.orderservice.dto.request.OrderCreateDto
+

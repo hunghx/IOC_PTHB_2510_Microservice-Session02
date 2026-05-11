@@ -30,8 +30,8 @@ spring:
         value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
         properties:
           spring.json.trusted.packages: "*"
-          spring.json.use.type.headers: false
-#          spring.json.value.type.mapping: order-create:ra.email.OrderCreateDto
+#          spring.json.use.type.headers: false
+          spring.json.type.mapping: OrderCreate:ra.email.OrderCreateDto
 
           spring.json.value.default.type: ra.email.OrderCreateDto
 
